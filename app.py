@@ -2,12 +2,11 @@ import streamlit as st
 import asyncio
 from typing import List
 from langchain_core.messages import AIMessage, HumanMessage, AnyMessage
-from tools import retrieve_company_information, track_order, estimate_delivery_time, calculate_shipping_cost, validate_address
+from tools import track_order, estimate_delivery_time, calculate_shipping_cost, validate_address
 from agent import ProductionAgent
 
 # Initialize the agent
 tools = [
-    retrieve_company_information,
     track_order,
     estimate_delivery_time,
     calculate_shipping_cost,
